@@ -1,4 +1,4 @@
-# Day one of 100days of coding with python
+# Day 1 of 100days of Coding with Python
 
 learnt about strings, variables and using the print, input function.
 
