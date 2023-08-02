@@ -1,3 +1,7 @@
+# Developed by: Victor Chiemeka
+# Date: 2/08/2023
+# Description:  calculates the number of days, weeks, and months left until the user reaches the age of 90
+
 age = int (input("What is your current age? "))
 
 remaining_years = 90 - age

@@ -1,3 +1,7 @@
+# Developed by: Victor Chiemeka
+# Date: 2/08/2023
+# Description: is a simple tip calculator.
+
 # Program Greetings
 print("Welcome to the tip calculator")
 
