@@ -1,14 +1,13 @@
 # Developed by: Victor Chiemeka
 # Date: 2/08/2023
-# Description: This program checks if year is leap year 
+# Description: This program checks if year is leap year
 
 print("Welcome to love calculator")
 
-firstLove = input("what is your name \n").lower()
-secondLove = input("what is their name \n").lower()
+firstLove = input("What is your name: ").lower()
+secondLove = input("What is their name: ").lower()
 
-combineName = firstLove + secondLove 
-
+combineName = firstLove + secondLove
 
 t = combineName.count("t")
 r = combineName.count("r")
@@ -24,13 +23,13 @@ e = combineName.count("e")
 
 love = l + o + v + e
 
-love_score = int (str(true) + str(love))
+love_score = int(str(true) + str(love))
 
 if (love_score < 10) or (love_score > 90):
-    print(f"your love score is {love_score}, you go together like coke and mentos")
+    print(f"Your love score is {love_score}, you go together like coke and mentos.")
 
-elif (love_score <= 40 ) or (love_score > 90):
-    print(f"your score is {love_score}, you are alright")
+elif (love_score <= 40) or (love_score > 90):
+    print(f"Your score is {love_score}, you are alright.")
 
 else:
-    print(f"your score is {love_score}, you are alright ")
+    print(f"Your score is {love_score}, you are alright.")

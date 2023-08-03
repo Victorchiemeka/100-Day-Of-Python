@@ -3,7 +3,8 @@
 # Description: This a game that check for user input and give an output based on the users input
 
 
-print('''
+print(
+    '''
 *******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
@@ -24,17 +25,23 @@ ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
 ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
-''')
+'''
+)
+
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 choice = input('Where do you want to go? Type "left" or "right" \n').lower()
 
 if choice == "left":
-    lake = input('You have come to a lake.There is an island in the middle of the lake.Type "wait" to wait for boat.Type "swim" to swim across\n')
+    lake = input(
+        'You have come to a lake.There is an island in the middle of the lake.Type "wait" to wait for boat.Type "swim" to swim across\n'
+    )
     if lake == "wait":
-        door = input('You arrived at the island in the middle of the lake. There is a house with 3 doors. One red, One yellow and One blue. Which do you choose? \n')
+        door = input(
+            "You arrived at the island in the middle of the lake. There is a house with 3 doors. One red, One yellow and One blue. Which do you choose? \n"
+        )
         if door == "yellow":
             print("You Win!")
         elif door == "blue":
@@ -44,13 +51,12 @@ if choice == "left":
 
         else:
             print("The house you entered does not exit")
-            
+
     elif lake == "swim":
         print("You have been drowned, Game over.")
     else:
         print("Game over")
-elif choice == "right" :
+elif choice == "right":
     print("There is no lake here. Game Over")
 else:
     print("Game Over")
-    
