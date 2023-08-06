@@ -9,3 +9,7 @@ I worked on multiple programs to demonstrate my clear understanding of how loops
 # I took on the FizzBuzz challenge.
 
 ![Alt text](image-1.png)
+
+# Worked on A password generator project
+
+![Alt text](image-2.png)
