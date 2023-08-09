@@ -1,3 +1,8 @@
+# Developed by: Victor Chiemeka
+# Date: 5/08/2023
+# Description: A program that takes away any vowel in the user input
+
+
 def main():
     # get users input
     message = input("Input: ")

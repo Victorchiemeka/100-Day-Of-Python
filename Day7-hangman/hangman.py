@@ -1,3 +1,7 @@
+# Developed by: Victor Chiemeka
+# Date: 7/08/2023
+# Description: Implemtation of the hangman game
+
 import random
 import hangman_art
 import hangman_word

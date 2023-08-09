@@ -1,3 +1,8 @@
+# Developed by: Victor Chiemeka
+# Date: 6/08/2023
+# Description: a program that prints vitao based on the number of word the user inputted
+
+
 def main():
     meow()
 

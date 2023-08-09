@@ -1,3 +1,8 @@
+# Developed by: Victor Chiemeka
+# Date: 6/08/2023
+# Description: Incrementing loops
+
+
 def main():
     emeka()
 
