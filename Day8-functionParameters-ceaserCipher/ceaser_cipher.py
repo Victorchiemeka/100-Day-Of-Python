@@ -1,3 +1,7 @@
+# Developed by: Victor Chiemeka
+# Date: 8/08/2023
+# Description: A program that encodes and decodes a message from the user input
+
 from art import logo
 
 print(logo)
