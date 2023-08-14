@@ -1,0 +1,2 @@
+# Day 13 of #100DaysOfCode:
+ 🐍🚀 Explored diverse debugging methods & honed the art of efficient Python debugging today. From pinpointing pesky bugs to adopting top-notch strategies, I'm now better equipped to conquer coding challenges!
