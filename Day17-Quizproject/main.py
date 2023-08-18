@@ -13,5 +13,5 @@ quiz = Brain(question_bank)
 while quiz.stillquestion():
     quiz.next_question()
 
-print("You have completed the Quiz")
-print(f"Your final score is {quiz.score}/{quiz.question_number}")
+print("You've completed the quiz")
+print(f"Your final score was: {quiz.score}/{quiz.question_number}")
