@@ -6,7 +6,7 @@ import time
 
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.bgcolor("black")
+screen.bgcolor("purple")
 screen.title("My Snake Game")
 screen.tracer(0)
 
@@ -37,14 +37,14 @@ while game_is_on:
         or snake.head.ycor() > 280
         or snake.head.ycor() < -288
     ):
-        game_is_on = False
-        score.game_over()
+        score.reset()
+        snake.reset()
     # Detect collation with tail
     for seg in snake.segments[1:]:
         if seg == snake.head:
             pass
         elif snake.head.distance(seg) < 10:
-            game_is_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
 
 screen.exitonclick()
