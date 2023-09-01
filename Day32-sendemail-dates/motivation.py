@@ -2,12 +2,12 @@ import smtplib
 import datetime as dt
 import random
 
-MY_EMAIL = "mmaduvictor30@gmail.com"
-MY_PASSWORD = "dltqbswbruqhifwv"
+MY_EMAIL =
+MY_PASSWORD = 
 
 now = dt.datetime.now()
 weekday = now.weekday()
-if weekday == 1:
+if weekday == 4:
     with open("quotes.txt") as quote_file:
         all_quotes = quote_file.readlines()
         quote = random.choice(all_quotes)

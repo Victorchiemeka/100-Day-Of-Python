@@ -1,8 +1,8 @@
 import smtplib
 import os
 
-my_email = "mmaduvictor@gmail.com"
-app_password = "dltqbswbruqhifwv"  # Replace with your app password
+my_email = 
+app_password =   # Replace with your app password
 
 # Create an environment variable for the password
 os.environ["EMAIL_PASSWORD"] = app_password
