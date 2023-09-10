@@ -2,8 +2,8 @@ from datetime import datetime
 import requests
 
 
-USERNAME = "victor-emeka"
-TOKEN = "Vicemeka127!@"
+USERNAME = "victor-chiemeka"
+TOKEN = "Vicemekusi123!@"
 GRAPH_ID = "mygraph1"
 pixela_endpoint = "https://pixe.la/v1/users"
 user_param = {
@@ -16,36 +16,17 @@ user_param = {
 #print(response.text)
 
 
-
 graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
 
 config_graph = {
         "id": GRAPH_ID,
         "name": "Coding graph",
         "unit": "hour",
-        "type": "float",
+        "type": "int",
         "color": "shibafu"
         }
 
-header =  {
-        "X-USER-TOKEN": TOKEN
-        }
-
-updated_time = {
-        "unit": "hour"
-        }
-
-response = requests.put(url=graph_endpoint, json=updated_time, headers=header)
+response = requests.post(url=graph_endpoint, json=config_graph)
 print(response.text)
 
-pixel_creation =  f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
-today = datetime.now()
 
-pixel_data = {
-        "date": today.strftime("%Y%m%d"),
-        "quantity":"4.5",
-
-        }
-
-#response = requests.post(url=pixel_creation, json=pixel_data, headers=header)
-print(response.text)
