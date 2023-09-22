@@ -1,7 +1,37 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import requests
 from datetime import datetime
 
+
+import smtplib
+import ssl
+
+
+def send_email(sender_email, receiver_email, subject, message, password):
+    port = 465  # For SSL
+    smtp_server = "smtp.gmail.com"
+    sender_email = sender_email
+    receiver_email = receiver_email
+    password = password
+    message = f"""\
+    Subject: {subject}\n\n{message}
+    """
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, message)
+
+
+# sender_email = "your_email@gmail.com"
+# receiver_email = "receiver_email@gmail.com"
+# subject = "Test Subject"
+# message = "This is a test message."
+
+# # Make sure to enable "less secure apps" or generate an app-specific password in your Gmail settings
+# password = "your_password"
+
+# send_email(sender_email, receiver_email, subject, message, password)
 app = Flask(__name__)
 
 
@@ -39,6 +69,27 @@ def get_post(num):
     day_date = datetime.now().day
     date = datetime.now().year
     return render_template("post.html", posts=requested_post, day=day_date, year=date)
+
+
+@app.route("/form-entry", methods=["POST", "GET"])
+def receive_data():
+    name = None
+    my_email = None
+    password = None
+    if request.method == "POST":
+        name = request.form.get("username")
+        email = request.form.get("email")
+        number = request.form.get("number")
+        message = request.form.get("message")
+        sender_email = "victorchukwuemeka127@gmail.com"
+        receiver_email = "victorchukwuemeka127@gmail.com"
+        subject = "Message"
+        password
+        my_message = (
+            f"\nName: {name}\n Email: {email}\n Number:{number}\n Message:{message}"
+        )
+        send_email(sender_email, receiver_email, subject, my_message, password)
+    return render_template("data.html")
 
 
 if __name__ == "__main__":
