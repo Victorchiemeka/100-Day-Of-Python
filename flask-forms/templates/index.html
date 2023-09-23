@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Victor's Secrets{% endblock %}
+{% block content %}
+  <!-- Improved layout using Bootstrap classes -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h1 class="text-center">Welcome to Victor's Secrets</h1>
+          </div>
+          <div class="card-body">
+            <p class="text-center">Are you ready to discover my secret?</p>
+            <div class="text-center">
+              <a class="btn btn-primary" href="{{ url_for('login') }}">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
