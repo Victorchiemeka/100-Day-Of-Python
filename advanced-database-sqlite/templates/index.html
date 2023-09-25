@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Define custom styles for Apple-inspired design -->
+    <style>
+        .bg-light { background-color: #f2f2f7; }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .list-group-item {
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center">My Library</h1>
+        {% if books == []: %}
+            <p class="text-muted text-center">Library is empty.</p>
+        {% endif %}
+        <ul class="list-group">
+            {% for book in books %}
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <a href="{{ url_for('delete', id=book.id) }}" class="btn btn-link text-danger">Delete</a>
+                            {{book.title}} - {{book.author}} - {{book.rating}}/10
+                        </div>
+                        <a href="{{ url_for('edit', id=book.id) }}" class="btn btn-link">Edit Rating</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('add') }}" class="btn btn-primary mt-3">Add New Book</a>
+    </div>
+    
+    <!-- Include Bootstrap JS and jQuery (optional, only if needed for Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

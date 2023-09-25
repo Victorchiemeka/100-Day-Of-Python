@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Rating</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Define custom styles for Apple-inspired design -->
+    <style>
+        body {
+            background-color: #f2f2f7;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            max-width: 400px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Edit Rating</h1>
+    <form action="{{ url_for('edit') }}" method="POST">
+        <p><strong>Book Name:</strong> {{book.title}}</p>
+        <p><strong>Current Rating:</strong> {{book.rating}}</p>
+        <input hidden="hidden" name="id" value="{{book.id}}" />
+        <div class="mb-3">
+            <label for="rating" class="form-label">New Rating</label>
+            <input name="rating" type="text" class="form-control" id="rating" placeholder="New Rating">
+        </div>
+        <button type="submit" class="btn btn-primary">Change Rating</button>
+    </form>
+</div>
+<!-- Include Bootstrap JS and jQuery (optional, only if needed for Bootstrap features) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

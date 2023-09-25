@@ -84,7 +84,8 @@ def receive_data():
         sender_email = "victorchukwuemeka127@gmail.com"
         receiver_email = "victorchukwuemeka127@gmail.com"
         subject = "Message"
-        password
+        password = "pyjvploocdlofpmw"
+
         my_message = (
             f"\nName: {name}\n Email: {email}\n Number:{number}\n Message:{message}"
         )
